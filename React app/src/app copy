@@ -1,0 +1,51 @@
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+import Loginscreen from './Loginscreen';
+import TripCRUD from './Trip';
+import img from './img.png';
+import './App.css';
+
+injectTapEventPlugin();
+
+class App extends Component {
+ constructor(props){
+    super(props);
+    this.state={
+      loginPage:[],
+      uploadScreen:[],
+	TripCRUD: []
+    }
+  }
+  componentWillMount(){
+    var loginPage =[];
+    loginPage.push(<Loginscreen parentContext={this}/>);
+    this.setState({
+                  loginPage:loginPage
+                    })
+  }
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+	  <img src={img} className="App-img" width="70" alt="img" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+	
+        <p className="App-intro">
+        	pranstarted
+        </p>
+
+	{this.state.loginPage}
+        {this.state.uploadScreen}
+	{this.state.TripCRUD}
+      </div>
+    );
+  }
+
+}
+
+export default App;
