@@ -1,8 +1,8 @@
 * Steps for creating react app :
 
-	sudo apt install npm
+	sudo apt install npm // if you have alredy have it then no need to install npm
 	sudo npm install -g create-react-app
-	sudo apt-get install nodejs-legacy
+	sudo apt-get install nodejs-legacy // if you have alredy have it then no need to install npm
 	create-react-app my-app
 		->After that the browser will open and can see the app
 * for opening app after creation (after closing the window which has opened after 1st creation of app):
